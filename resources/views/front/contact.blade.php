@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="text">
-                                {{-- <p>{{ $shareData['header']->body }}</p> --}}
+                                <p>{{ $header->body }}</p>
                                 <div class="mouse">
                                     <a href="#" class="mouse-icon">
                                         <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
             <div class="col-md-12 mb-4">
-                <h2 class="h3">Contact Information</h2>
+                <h2 class="h3">{{ __('contact_info') }}</h2>
             </div>
             <div class="w-100"></div>
             <div class="col-md-3">
@@ -78,7 +78,7 @@
             <div class="col-md">
               <div class="ftco-footer-widget mb-4">
                 <h2 class="logo"><a href="#">Read<span>it</span>.</a></h2>
-                <p>{{ $header->title }}</p>
+                <p>{{ $header->body }}</p>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                   <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                   <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>

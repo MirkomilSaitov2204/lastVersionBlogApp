@@ -30,7 +30,7 @@ class IndexController extends Controller
         {
             $session = session()->get('locale');
             // dd($session);
-            $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(1)->get();
+            $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(2)->get();
             $contact = Contact::where('locale', $session)->first();
 
 
@@ -70,7 +70,7 @@ class IndexController extends Controller
         if(request('id'))
         {
             $session = session()->get('locale');
-            $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(1)->get();
+            $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(2)->get();
             $contact = Contact::where('locale', $session)->first();
 
 
@@ -93,7 +93,7 @@ class IndexController extends Controller
 
         $session = session()->get('locale');
         $categories = Category::all();
-        $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(1)->get();
+        $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(2)->get();
         $contact = Contact::where('locale', $session)->first();
 
         $header = Header::where('locale', $session)->first();
@@ -123,7 +123,7 @@ class IndexController extends Controller
     {
 
         $session = session()->get('locale');
-        $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(1)->get();
+        $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(2)->get();
         $contact = Contact::where('locale', $session)->first();
 
         $tags = Tag::where('locale', $session)->get();

@@ -19,7 +19,7 @@ class ContactController extends Controller
    {
 
         $session = session()->get('locale');
-        $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(1)->get();
+        $footer_blog = Post::where('locale', $session)->where('status', 'PUBLISHED')->orderBy('id','desc')->take(2)->get();
 
         $contact = Contact::where('locale', $session)->first();
         $header = Header::where('locale', $session)->first();
